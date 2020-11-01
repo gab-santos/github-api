@@ -1,16 +1,23 @@
 /* eslint-disable jsx-a11y/label-has-associated-control */
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { FormEvent, useState } from "react";
+import { useHistory } from "react-router-dom";
 
 import { Container, GithubLogo, Main, PersonIcon, SearchIcon } from "./styles";
 
 const Home: React.FC = () => {
   const [user, setUser] = useState("");
+  const history = useHistory();
+
+  function handleSubmit(event: FormEvent) {
+    event.preventDefault();
+
+    history.push(`/user/${user}`);
+  }
 
   return (
     <Container>
       <GithubLogo />
-      <Main>
+      <Main onSubmit={handleSubmit}>
         <label htmlFor="user">Pesquise por um usuário do Github</label>
 
         <div className="input-container">
@@ -24,10 +31,10 @@ const Home: React.FC = () => {
           />
         </div>
 
-        <Link to={`/user/${user}`}>
+        <button type="submit">
           <SearchIcon />
           Pesquisar
-        </Link>
+        </button>
       </Main>
     </Container>
   );

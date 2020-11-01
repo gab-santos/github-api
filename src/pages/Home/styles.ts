@@ -68,7 +68,7 @@ export const Main = styled.form`
     }
   }
 
-  a {
+  button {
     height: 48px;
 
     display: flex;
