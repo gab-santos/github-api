@@ -1,6 +1,6 @@
 # GITHUB API
 
-Esse projeto simples que comsume a API pública do Github e exibe os dados do usuário e seus repositórios públicos.
+Esse projeto simples consume a API pública do Github e exibe os dados do usuário e seus repositórios públicos.
 
 Dentro dessa stack cada ferramenta tem sua própria responsabilidade:
 
@@ -21,7 +21,7 @@ Dentro dessa stack cada ferramenta tem sua própria responsabilidade:
 Clone o projeto e instale suas dependências:
 
 ```
-git clone https://github.com/gab-santos/github-api
+git clone https://github.com/gab-santos/github-api.git
 cd github-api
 npm install
 ```
