@@ -1,5 +1,7 @@
 import React from "react";
 
+import { User } from "../../services/github";
+
 import {
   Container,
   Header,
@@ -12,16 +14,6 @@ import {
   Bio,
 } from "./styles";
 
-interface User {
-  login: string;
-  avatar_url: string;
-  html_url: string;
-  name: string;
-  blog: string;
-  location: string;
-  bio: string;
-}
-
 interface ProfileProps {
   user: User;
 }
@@ -30,37 +22,32 @@ const Profile: React.FC<ProfileProps> = ({ user }) => {
   return (
     <Container>
       <Header>
-        <Avatar src="https://picsum.photos/id/1003/200/300" alt="" />
+        <Avatar src={user.avatar_url} alt="" />
 
         <UserData>
-          <a href="http://" target="_blank" rel="noopener noreferrer">
-            Lorem ipsum
+          <a href={user.html_url} target="_blank" rel="noopener noreferrer">
+            {user.name}
           </a>
 
           <Infos>
             <span>
               <UsernameIcon />
-              Lorem ipsum
+              {user.login}
             </span>
             <span>
               <LinkIcon />
-              Lorem ipsum
+              {user.blog}
             </span>
             <span>
               <LocationIcon />
-              Lorem ipsum
+              {user.location}
             </span>
           </Infos>
         </UserData>
       </Header>
 
       <Bio>
-        <p>
-          Lorem, ipsum dolor sit amet consectetur adipisicing elit. Expedita
-          aspernatur cum doloremque qui, rem sapiente ut animi corporis,
-          necessitatibus, amet maiores placeat delectus laudantium excepturi
-          hic! Dolorum cum obcaecati id?
-        </p>
+        <p>{user.bio}</p>
       </Bio>
     </Container>
   );

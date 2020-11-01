@@ -4,9 +4,9 @@ import styled, { css } from "styled-components";
 
 export const Container = styled.div`
   width: 100%;
-  padding: 20px;
+  padding: 1.25rem; //20px
 
-  border-radius: 8px;
+  border-radius: 0.5rem; //8px
   background-color: ${props => props.theme.colors.light};
 `;
 
@@ -16,9 +16,9 @@ export const Header = styled.header`
 `;
 
 export const Avatar = styled.img`
-  height: 112px;
-  width: 112px;
-  border-radius: 56px;
+  height: 7rem; //112px
+  width: 7rem; //112px
+  border-radius: 3.5rem; //56px
 
   object-fit: cover;
 `;
@@ -28,11 +28,11 @@ export const UserData = styled.div`
   flex-direction: column;
   justify-content: space-between;
 
-  margin-left: 20px;
+  margin-left: 1.5rem; //20px
 
   a {
-    font: 600 24px "Poppins";
-    line-height: 36px;
+    font: 600 1.5rem "Poppins";
+    line-height: 2.25rem; //36px
     color: ${props => props.theme.colors.darkPrimary};
     text-decoration: none;
 
@@ -50,8 +50,8 @@ export const Infos = styled.div`
     display: flex;
     align-items: center;
 
-    font-size: 14px;
-    line-height: 21px;
+    font-size: 0.875rem; //14px
+    line-height: 1.3125rem; //21px
     color: ${props => props.theme.colors.primary};
 
     :first-of-type {
@@ -63,7 +63,7 @@ export const Infos = styled.div`
 const icons = {
   size: "14px",
   style: css`
-    margin-right: 5px;
+    margin-right: 0.3125rem; //5px
   `,
 };
 
@@ -86,10 +86,10 @@ export const LocationIcon = styled(GoLocation).attrs({
 `;
 
 export const Bio = styled.footer`
-  margin-top: 20px;
+  margin-top: 1.25rem; //20px
 
   p {
-    line-height: 24px;
+    line-height: 1.5rem;
     color: ${props => props.theme.colors.darkPrimary};
   }
 `;

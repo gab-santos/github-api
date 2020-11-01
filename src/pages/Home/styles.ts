@@ -27,28 +27,28 @@ export const Main = styled.form`
   display: flex;
   flex-direction: column;
 
-  padding: 20px;
+  padding: 1.5rem; //20px
   background-color: ${props => props.theme.colors.light};
-  border-radius: 8px;
+  border-radius: 0.5rem; // 8px
 
   label {
-    font: 16px "Poppins";
-    line-height: 24px;
+    font: 1rem "Poppins"; //16px
+    line-height: 1.5rem; // 1.5rem
     color: ${props => props.theme.colors.primary};
   }
 
   .input-container {
-    height: 48px;
+    height: 3rem; //48px
 
     display: flex;
     align-items: center;
 
-    padding: 10px;
-    margin: 10px 0;
+    padding: 0.625rem; //10px
+    margin: 0.3125rem 0; //5px
 
     background-color: ${props => props.theme.colors.white};
-    border: 1px solid ${props => props.theme.colors.light};
-    border-radius: 4px;
+    border: 0.0625rem solid ${props => props.theme.colors.light}; //1px
+    border-radius: 0.25rem; //4px
 
     :focus-within {
       border-color: ${props => props.theme.colors.lightPrimary};
@@ -57,7 +57,7 @@ export const Main = styled.form`
     input {
       width: 100%;
 
-      line-height: 24px;
+      line-height: 1.5rem; // 1.5rem
       color: ${props => props.theme.colors.darkPrimary};
       outline: 0;
       border: 0;
@@ -68,8 +68,14 @@ export const Main = styled.form`
     }
   }
 
+  .error {
+    margin-bottom: 0.625rem; //10px
+    font-size: 0.875rem; //14px
+    color: ${props => props.theme.colors.error};
+  }
+
   button {
-    height: 48px;
+    height: 3rem; //48px
 
     display: flex;
     align-items: center;
@@ -78,7 +84,7 @@ export const Main = styled.form`
     outline: 0;
     border: 0;
     text-decoration: none;
-    border-radius: 4px;
+    border-radius: 0.25rem; //4px
     background-color: ${props => props.theme.colors.secondary};
 
     color: ${props => props.theme.colors.white};
@@ -98,14 +104,14 @@ export const Main = styled.form`
 `;
 
 export const PersonIcon = styled(GoPerson).attrs({
-  size: "24px",
+  size: "1.5rem", // 1.5rem
 })`
   color: ${props => props.theme.colors.lightPrimary};
-  margin-right: 10px;
+  margin-right: 0.625rem; //10px
 `;
 
 export const SearchIcon = styled(GoSearch).attrs({
-  size: "24px",
+  size: "1.5rem", // 1.5rem
 })`
-  margin-right: 10px;
+  margin-right: 0.625rem; //10px
 `;

@@ -45,6 +45,7 @@
     "import/extensions": [0, "never"],
     "camelcase": "off",
     "react/prop-types": "off",
+    "react/jsx-one-expression-per-line": "off",
     //
     "import-helpers/order-imports": [ "warn", {
       "newlinesBetween": "always",

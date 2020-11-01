@@ -7,33 +7,48 @@ export const Container = styled.div`
   max-width: 34rem; // 544px
 
   margin: 0 auto;
-  padding: 20px 0;
+  padding: 1.25rem 0.625rem; // 20px 10px
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  strong {
+  .loading,
+  .no-repositories {
+    font: 700 1rem "Poppins"; //16px
+    color: ${props => props.theme.colors.lightPrimary};
+  }
+
+  .no-repositories {
+    margin-top: 1.25rem; // 20px
+  }
+
+  .error {
+    font: 700 1rem "Poppins"; //16px
+    color: ${props => props.theme.colors.darkPrimary};
+  }
+
+  > strong {
     display: flex;
     align-items: center;
-    margin-top: 40px;
+    margin-top: 2.5rem; //40px
 
-    font: 700 24px "Poppins";
-    line-height: 36px;
+    font: 700 1.5rem "Poppins"; //1.5rem
+    line-height: 2.25rem; //36px
     text-transform: capitalize;
     color: ${props => props.theme.colors.lightPrimary};
   }
 `;
 
 export const GithubLogo = styled(GoMarkGithub).attrs({
-  size: "34px",
+  size: "2.125rem", // 34px
 })`
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem; // 20px
   color: ${props => props.theme.colors.lightPrimary};
 `;
 
 export const RepoIcon = styled(GoRepo).attrs({
-  size: "24px",
+  size: "1.5rem", // 1.5rem
 })`
-  margin-right: 20px;
+  margin-right: 1.25rem; // 20px
 `;
